@@ -5,28 +5,41 @@ Dico accusata percipitur pro ex. At consulatu deseruis3456784se inciderint est, 
 Usu error accommodare ad, audire scribentur vis ex, et eos diam etiam nostrum. Quaestio suavitate eu mel, ut vim verear blandit. At nec dicat3456789 voluptaria definitiones, illud labitur consequat ad est, in iuvaret alterum salutatus has. Iusto prompta habemus ad vim. At ius tempor patrioque,2345678 accusata"
 
 
-# method that isolates text or scans for numbers and eliminates irrelevant content.
-# method that assigns numbers to a unique variable or stores inside an array or table
-# method that associates two numbers together, or other methods for fun stuff
+def method(data)
 
-def number_finder
+index = 0
 
-# loop until end of text or document
-	# get the length of the text or document
+message = data.strip.delete"abcdefghijklmnopqrstuvwxyz"
+caps = message.delete "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-# perform task with appropriate methods untill all numbers have been extracted
-	end
+char = data[index]
+letter = char.delete "0123456789"
+number = char.delete "abcdefghijklmnopqrstuvwxyz"
 
-def number_bank
 
-# Call this method on the return values of number finder
-# loop until all values in number finder are stored in an array
-# Need two indentifiers: Array reference pair and number_finder result
 
+until index == data.length
+
+	# if data[index] == 0 - 9 
+		# store inside an array or a hash until character is no longer a number
+	# else
+		# move on to next character
+	#end		
+
+     
+	index += 1
+    
+end
+	
 
 end
 
-# Print to screen the results stored in number_bank
+method(content)
+
+
+
+
+
 
 
 
