@@ -1,5 +1,5 @@
 
-#MFR Finder is an application that strips strings of irrelevant content, finds all numeric data, stores it as a useful number. 
+#MFR Finder is an application that strips strings of irrelevant content, finds all numeric data, stores it as a useful referencable number. 
 
 require "open-uri"
 require "uri"
@@ -21,6 +21,12 @@ index = 0
 char = data[index]
 
 chararray = []
+
+#Logic to be build:
+#if char is an integer with anything but an integer succeeded it
+#take all integers before and store them into a hash 
+#flag 'first' letter and last 'letter'
+#everything in between goes into hash
 
 
 until index == data.length
@@ -64,8 +70,6 @@ p chararray
 end
 
 method(content)
-
-#Next goal is to build a method that takes html data, searches it and returns the numeric data.
 
 def htmlmethod(data)
 
@@ -116,10 +120,9 @@ htmlcontent = doc.to_html
 htmlmethod(htmlcontent)
 
 
-#http = Net::HTTP.new(htmlcontent.host, uri.port)
-#response = http.request(Net::HTTP::Get.new(uri.request_uri))
-
-
+# have control over strings within and outside of application
+# need to include logic that stores information into a referencable hash
+# needs to print pairs 
 
 
 
