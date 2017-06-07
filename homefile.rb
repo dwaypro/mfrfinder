@@ -1,3 +1,7 @@
+
+#MFR Finder is an application that strips strings of irrelevant content, finds all numeric data, stores it as a useful number. 
+
+
 content = "Lorem ipsum dolor sit amet, an dicunt noluisse legendos vis, oportere vulputate constituto his ut. Harum quaerendum vis ut. Audiam pertinax sensibus ei sed. Hinc tantas omnesque has at, id has prodesset 1783493 mnesarchum inciderint. Et labore diceret has, at quidam mentitum pri, eu vis eius sensibus oportere.
 
 Dico accusata percipitur pro ex. At consulatu deseruis3456784se inciderint est, ea assum dolorum dissentiunt sed. Meis labitur accusam qui te, animal alienum vel cu. Nisl prima oportere no sit.
@@ -9,32 +13,53 @@ def method(data)
 
 index = 0
 
-message = data.strip.delete"abcdefghijklmnopqrstuvwxyz"
-caps = message.delete "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-
 char = data[index]
-letter = char.delete "0123456789"
-number = char.delete "abcdefghijklmnopqrstuvwxyz"
 
+chararray = []
 
 
 until index == data.length
 
-	# if data[index] == 0 - 9 
-		# store inside an array or a hash until character is no longer a number
-	# else
-		# move on to next character
-	#end		
+char_letter = data[index + 1]
+		
+if char_letter == "0"
+	puts char_letter
+	chararray << char_letter
+elsif char_letter == "2"
+	puts char_letter
+	chararray << char_letter
+elsif char_letter == "3"
+	puts char_letter
+	chararray << char_letter
+elsif char_letter == "4"
+	puts char_letter
+	chararray << char_letter
+elsif char_letter == "5"
+	puts char_letter
+	chararray << char_letter
+elsif char_letter == "6"
+	puts char_letter
+	chararray << char_letter
+elsif char_letter == "7"
+	puts char_letter
+	chararray << char_letter
+elsif char_letter == "8"
+	puts char_letter
+	chararray << char_letter
+elsif char_letter == "9"
+	puts char_letter
+	chararray << char_letter
+else
+	data.delete "#{char_letter}"
 
-     
-	index += 1
-    
 end
-	
-
+	index += 1 
+end
+p chararray 	
 end
 
 method(content)
+
 
 
 
