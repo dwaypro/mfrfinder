@@ -1,6 +1,11 @@
 
 #MFR Finder is an application that strips strings of irrelevant content, finds all numeric data, stores it as a useful number. 
 
+require "open-uri"
+require "uri"
+require "nokogiri"
+require "open-uri"
+
 
 content = "Lorem ipsum dolor sit amet, an dicunt noluisse legendos vis, oportere vulputate constituto his ut. Harum quaerendum vis ut. Audiam pertinax sensibus ei sed. Hinc tantas omnesque has at, id has prodesset 1783493 mnesarchum inciderint. Et labore diceret has, at quidam mentitum pri, eu vis eius sensibus oportere.
 
@@ -60,8 +65,59 @@ end
 
 method(content)
 
+#Next goal is to build a method that takes html data, searches it and returns the numeric data.
+
+def htmlmethod(data)
+
+index = 0
+
+char = data[index]
+
+chararray = []
+
+puts "Begin html:"
+
+until index == data.length
+
+char_letter = data[index + 1]
+		
+if char_letter == "0"
+	chararray << char_letter
+elsif char_letter == "2"
+	chararray << char_letter
+elsif char_letter == "3"
+	chararray << char_letter
+elsif char_letter == "4"
+	chararray << char_letter
+elsif char_letter == "5"
+	chararray << char_letter
+elsif char_letter == "6"
+	chararray << char_letter
+elsif char_letter == "7"
+	chararray << char_letter
+elsif char_letter == "8"
+	chararray << char_letter
+elsif char_letter == "9"
+	chararray << char_letter
+else
+	
+end
+	index += 1 
+end
+p chararray 	
+end
 
 
+doc = Nokogiri::HTML(open("http://www.google.com"))
+
+htmlcontent = doc.to_html
+
+
+htmlmethod(htmlcontent)
+
+
+#http = Net::HTTP.new(htmlcontent.host, uri.port)
+#response = http.request(Net::HTTP::Get.new(uri.request_uri))
 
 
 
